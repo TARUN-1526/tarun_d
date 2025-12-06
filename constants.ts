@@ -17,7 +17,7 @@ export const PERSONAL_INFO = {
   trailhead: "https://trailhead.salesforce.com/en/me/your-username",
   // -------------------------------------------------------------
   location: "Guntur, India",
-  avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=500&h=500&q=80",
+  avatar: "/avatar.png",
   summary: "Computer Science graduate with expertise in Salesforce CRM (Apex, Lightning Components, Workflows), Java, Python, SQL, and AWS. Engineered web applications and ML models with measurable impact. Skilled in REST API development, data analysis, CI/CD, and cross-functional team collaboration."
 };
 
