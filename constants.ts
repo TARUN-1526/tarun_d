@@ -10,16 +10,17 @@ export const PERSONAL_INFO = {
   phone: "+91-7993648137",
   linkedin: "https://linkedin.com/in/tarun-dwarakacharla",
   github: "https://github.com/TARUN-1526",
-  // ---- new coding profiles (replace with real profile URLs) ----
-  leetcode: "https://leetcode.com/your-username",
-  hackerrank: "https://www.hackerrank.com/your-username",
-  codechef: "https://www.codechef.com/users/your-username",
-  trailhead: "https://trailhead.salesforce.com/en/me/your-username",
+  // coding profiles (actual URLs)
+  leetcode: "https://leetcode.com/u/tarun_dwarakacharla1/",
+  hackerrank: "https://www.hackerrank.com/profile/dwarakarlata1",
+  codechef: "https://www.codechef.com/users/cheer_rose_83",
+  trailhead: "https://www.salesforce.com/trailblazer/mox330mgu4pi0ij173",
   // -------------------------------------------------------------
   location: "Guntur, India",
   avatar: "/avatar.png",
   summary: "Computer Science graduate with expertise in Salesforce CRM (Apex, Lightning Components, Workflows), Java, Python, SQL, and AWS. Engineered web applications and ML models with measurable impact. Skilled in REST API development, data analysis, CI/CD, and cross-functional team collaboration."
 };
+
 
 
 export const EXPERIENCES: ExperienceItem[] = [
