@@ -85,7 +85,6 @@ export const PROJECTS: ProjectItem[] = [
       "Improved selection efficiency by 50% with filtering, pagination, and CSV export.",
       "Coordinated UI/UX design and backend integration."
     ],
-    "link": "www.github.com",
     "github": "https://github.com/TARUN-1526/veteran-talent-finder",
     "demo": "https://veteran-talent-finder-jc3hsrnuhehb6uszg8waac.streamlit.app/"
   },
