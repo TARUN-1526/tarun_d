@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useContent } from '../context/ContentContext';
 import { X, Save, RotateCcw, Plus, Trash2, Download, Lock, ExternalLink, Settings, Key, Image } from 'lucide-react';
@@ -262,7 +261,7 @@ export const AWARDS: Award[] = ${JSON.stringify(awards, null, 2)};
                  <div className="flex justify-between">
                    <h3 className="text-xl font-bold text-white">Projects</h3>
                    <button 
-                     onClick={() => updateContent('projects', [{ id: Date.now(), title: 'New Project', tech: 'React, TS', category: 'Full Stack', description: ['Project description'] }, ...projects])}
+                     onClick={() => updateContent('projects', [{ id: Date.now(), title: 'New Project', tech: 'React, TS', category: 'Full Stack', github: '', demo: '', description: ['Project description'] }, ...projects])}
                      className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-sm flex items-center gap-1"
                    >
                      <Plus size={14} /> Add Project
@@ -288,8 +287,28 @@ export const AWARDS: Award[] = ${JSON.stringify(awards, null, 2)};
                           <option value="Full Stack">Full Stack</option>
                           <option value="AI/ML">AI/ML</option>
                         </select>
+
+                        {/* GitHub repo input */}
                         <div className="relative">
-                           <input value={proj.link} onChange={(e) => { const n = [...projects]; n[idx].link = e.target.value; updateContent('projects', n); }} className="input-field pl-9" placeholder="Project Link" />
+                           <input 
+                             value={proj.github || ''} 
+                             onChange={(e) => { const n = [...projects]; n[idx].github = e.target.value; updateContent('projects', n); }} 
+                             className="input-field pl-10" 
+                             placeholder="Project Repo (GitHub) - optional" 
+                           />
+                           <svg className="absolute left-3 top-3 w-4 h-4 text-slate-500" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M12 .5C5.649.5.5 5.649.5 12a11.5 11.5 0 0 0 7.835 10.933c.573.105.784-.249.784-.553 0-.273-.01-1.183-.015-2.144-3.188.694-3.863-1.536-3.863-1.536-.52-1.322-1.27-1.674-1.27-1.674-1.04-.71.079-.695.079-.695 1.15.081 1.754 1.18 1.754 1.18 1.022 1.753 2.68 1.247 3.333.953.104-.74.4-1.247.727-1.536-2.546-.289-5.222-1.273-5.222-5.662 0-1.251.446-2.272 1.176-3.073-.118-.29-.51-1.454.112-3.03 0 0 .96-.308 3.147 1.175a10.86 10.86 0 0 1 2.866-.385c.972.004 1.95.131 2.867.385 2.185-1.483 3.144-1.175 3.144-1.175.624 1.576.232 2.74.114 3.03.732.801 1.174 1.822 1.174 3.073 0 4.4-2.681 5.369-5.236 5.653.41.353.775 1.047.775 2.111 0 1.526-.015 2.754-.015 3.129 0 .307.208.663.79.551A11.503 11.503 0 0 0 23.5 12c0-6.351-5.149-11.5-11.5-11.5Z" />
+                           </svg>
+                        </div>
+
+                        {/* Live demo input */}
+                        <div className="relative">
+                           <input 
+                             value={proj.demo || ''} 
+                             onChange={(e) => { const n = [...projects]; n[idx].demo = e.target.value; updateContent('projects', n); }} 
+                             className="input-field pl-10" 
+                             placeholder="Live Demo URL (optional)" 
+                           />
                            <ExternalLink size={16} className="absolute left-3 top-3 text-slate-500" />
                         </div>
                       </div>
@@ -361,7 +380,7 @@ export const AWARDS: Award[] = ${JSON.stringify(awards, null, 2)};
                           <input value={edu.score} onChange={(e) => { const n = [...education]; n[idx].score = e.target.value; updateContent('education', n); }} className="input-field" placeholder="Score/GPA" />
                         </div>
                     </div>
-                 ))}
+                 ))} 
                </div>
             )}
 
@@ -404,7 +423,7 @@ export const AWARDS: Award[] = ${JSON.stringify(awards, null, 2)};
                  <div className="flex justify-between">
                    <h3 className="text-xl font-bold text-white">Awards & Honors</h3>
                    <button 
-                     onClick={() => updateContent('awards', [{ title: 'New Award', description: 'Description' }, ...awards])}
+                     onClick={() => updateContent('awards', [{ title: 'New Award', description: 'Description', link: '' }, ...awards])}
                      className="px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-sm flex items-center gap-1"
                    >
                      <Plus size={14} /> Add Award
@@ -419,16 +438,20 @@ export const AWARDS: Award[] = ${JSON.stringify(awards, null, 2)};
                           >
                             <Trash2 size={16} />
                           </button>
-                          <div className="space-y-2">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                              <input value={award.title} onChange={(e) => { const n = [...awards]; n[idx].title = e.target.value; updateContent('awards', n); }} className="input-field" placeholder="Award Title" />
                              <input value={award.description} onChange={(e) => { const n = [...awards]; n[idx].description = e.target.value; updateContent('awards', n); }} className="input-field" placeholder="Description" />
+                             <div className="relative md:col-span-2">
+                                <input value={(award as any).link || ''} onChange={(e) => { const n = [...awards]; n[idx].link = e.target.value; updateContent('awards', n); }} className="input-field pl-9" placeholder="Link (Optional) - e.g. Google Drive share link" />
+                                <ExternalLink size={16} className="absolute left-3 top-3 text-slate-500" />
+                             </div>
                           </div>
                       </div>
                    ))}
                  </div>
               </div>
             )}
-            
+
             {/* Settings Tab */}
             {activeTab === 'settings' && (
               <div className="space-y-8 max-w-xl">

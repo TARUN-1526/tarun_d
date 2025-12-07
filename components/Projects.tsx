@@ -58,11 +58,47 @@ export const Projects: React.FC = () => {
                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center bg-gradient-to-br ${gradient} text-white shadow-lg`}>
                        <Icon size={24} />
                     </div>
-                    {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all border border-slate-100">
-                        <ArrowUpRight size={20} />
-                      </a>
-                    )}
+
+                    {/* Action Buttons (conditional) */}
+                    <div className="flex gap-3">
+                      {/* GitHub Link — shows only if project.github exists */}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-slate-900 hover:text-white transition-all border border-slate-200"
+                          title="View Source Code"
+                        >
+                          {/* GitHub Icon (SVG) */}
+                          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 .5C5.649.5.5 5.649.5 12a11.5 11.5 0 0 0 7.835 10.933c.573.105.784-.249.784-.553 
+                              0-.273-.01-1.183-.015-2.144-3.188.694-3.863-1.536-3.863-1.536-.52-1.322-1.27-1.674-1.27-1.674
+                              -1.04-.71.079-.695.079-.695 1.15.081 1.754 1.18 1.754 1.18 1.022 1.753 2.68 1.247 
+                              3.333.953.104-.74.4-1.247.727-1.536-2.546-.289-5.222-1.273-5.222-5.662 
+                              0-1.251.446-2.272 1.176-3.073-.118-.29-.51-1.454.112-3.03 0 0 .96-.308 
+                              3.147 1.175a10.86 10.86 0 0 1 2.866-.385c.972.004 1.95.131 2.867.385 
+                              2.185-1.483 3.144-1.175 3.144-1.175.624 1.576.232 2.74.114 3.03.732.801 
+                              1.174 1.822 1.174 3.073 0 4.4-2.681 5.369-5.236 5.653.41.353.775 1.047.775 2.111 
+                              0 1.526-.015 2.754-.015 3.129 0 .307.208.663.79.551A11.503 11.503 0 0 0 23.5 12 
+                              c0-6.351-5.149-11.5-11.5-11.5Z" />
+                          </svg>
+                        </a>
+                      )}
+
+                      {/* Demo Link — shows only if project.demo exists */}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:bg-emerald-600 hover:text-white transition-all border border-slate-200"
+                          title="Live Demo"
+                        >
+                          <ArrowUpRight size={18} />
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   <span className={`inline-block px-3 py-1 rounded-lg text-xs font-bold mb-4 w-fit border ${getCategoryColor(project.category)}`}>
@@ -78,7 +114,7 @@ export const Projects: React.FC = () => {
                   </p>
 
                   <div className="flex flex-wrap gap-2 mt-auto">
-                     {project.tech.split(', ').map((t, i) => (
+                     {project.tech.split(', ').map((t: string, i: number) => (
                         <span key={i} className="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-600 border border-slate-200">
                            #{t.trim()}
                         </span>

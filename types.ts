@@ -13,7 +13,8 @@ export interface ProjectItem {
   title: string;
   tech: string;
   description: string[];
-  link?: string;
+  github?: string;
+  demo?: string;
   category: 'Salesforce' | 'Full Stack' | 'AI/ML';
 }
 
@@ -40,4 +41,5 @@ export interface Certification {
 export interface Award {
   title: string;
   description: string;
+  link?: string; // optional: URL to certificate / proof (e.g., Google Drive share link)
 }
