@@ -68,49 +68,50 @@ export const PROJECTS: ProjectItem[] = [
     "title": "Consumer Goods Distributor Partner Portal",
     "tech": "Salesforce, Apex, LWC, Reports",
     "category": "Salesforce",
-    "github": "https://github.com/TARUN-1526/partner-portal",
     "description": [
       "CRM solution managing 100+ distributors and 2000+ orders.",
       "Automated workflows and approval processes reduced manual reporting effort by 40%.",
       "Tracks inventory and sales pipelines efficiently."
-    ]
+    ],
+    "github": "https://github.com/TARUN-1526/tcs_LastMile_project"
   },
   {
     "id": 2,
     "title": "Veteran Talent Finder",
     "tech": "Python, GitHub API, Streamlit, SerpAPI",
     "category": "AI/ML",
-    "github": "https://github.com/TARUN-1526/veteran-talent-finder",
     "description": [
       "Recruitment tool filtering 500+ candidate profiles by skills and location.",
       "Improved selection efficiency by 50% with filtering, pagination, and CSV export.",
       "Coordinated UI/UX design and backend integration."
-    ]
+    ],
+    "link": "www.github.com",
+    "github": "https://github.com/TARUN-1526/veteran-talent-finder",
+    "demo": "https://veteran-talent-finder-jc3hsrnuhehb6uszg8waac.streamlit.app/"
   },
   {
     "id": 3,
     "title": "YOLOv5 Real-Time Object Detection",
     "tech": "Python, PyTorch, YOLOv5",
     "category": "AI/ML",
-    "github": "https://github.com/TARUN-1526/yolov5-real-time",
     "description": [
       "Real-time detection pipeline for 20+ object classes.",
       "Improved mAP by 15% using data augmentation.",
       "Reduced inference time by 30% through batch optimization."
-    ]
+    ],
+    "github": "https://github.com/AabidMK/Object-Recognition-System__Infosys_Internship_Feb2025/tree/Tarun"
   },
   {
     "id": 4,
     "title": "Food Express Web App",
     "tech": "Spring Boot, SQL, Thymeleaf",
     "category": "Full Stack",
-    "github": "https://github.com/TARUN-1526/food-express",
-    "demo": "https://food-express.example.com",
     "description": [
       "Built backend APIs supporting 50+ concurrent users.",
       "Optimized SQL queries and caching to reduce response time by 25%.",
       "Implemented secure authentication and full frontend integration."
-    ]
+    ],
+    "github": "https://github.com/TARUN-1526/Food_Express"
   }
 ];
 
@@ -186,40 +187,65 @@ export const CHART_DATA = [
   {
     "subject": "Salesforce",
     "A": 95,
-    "fullMark": 100
+    "fullMark": 80
   },
   {
     "subject": "Java/Spring",
     "A": 85,
-    "fullMark": 100
+    "fullMark": 80
   },
   {
     "subject": "Python/AI",
     "A": 80,
-    "fullMark": 100
+    "fullMark": 70
   },
   {
     "subject": "SQL/DB",
     "A": 90,
-    "fullMark": 100
+    "fullMark": 90
   },
   {
     "subject": "Web/JS",
     "A": 75,
-    "fullMark": 100
+    "fullMark": 80
   },
   {
     "subject": "DevOps",
     "A": 70,
-    "fullMark": 100
+    "fullMark": 10
   }
 ];
 
 export const CERTIFICATIONS: Certification[] = [
   {
+    "name": "SALESFORCE CERT IFIED Agentforce Specialist",
+    "issuer": "Salesforce",
+    "details": " ISSUED: December 06, 2025,  CREDENTIAL_ID: 7141951",
+    "link": "https://drive.google.com/file/d/1lmIAA-hdcnQKjSDusnNRCQ3t00OZa5nf/view?usp=sharing"
+  },
+  {
+    "name": "Database Management System",
+    "issuer": "NPTEL",
+    "details": "",
+    "link": "https://drive.google.com/file/d/1J-cj9VwcLdk0KAkudJ1CnrLk1VpnCQS3/view?usp=sharing"
+  },
+  {
+    "name": "Cloud Computing",
+    "issuer": "NPTEL",
+    "details": "",
+    "link": "https://drive.google.com/file/d/1rVZ1LYiruNran_KCxSdFIOeSvoWdtGEf/view?usp=sharing"
+  },
+  {
+    "name": "Java Full Stack Wipro TalentNext",
+    "issuer": "Wipro",
+    "details": "ID:: TNext_SE_25_J_251710025 ",
+    "link": "https://drive.google.com/file/d/1QWc8cMuUobyQHHdmEpT7zBZ2_arjKCtK/view?usp=sharing"
+  },
+  {
     "name": "Certified Generative AI Professional (OCI 2025)",
     "issuer": "Oracle Cloud Infrastructure",
-    "details": "ID: 102246585OCI25GAIOCP"
+    "details": "ID: 102246585OCI25GAIOCP",
+    "link": "https://drive.google.com/file/d/1-yf2mEbiAnEhZ2jouyObvza4Li3Vd1i8/view?usp=sharing"
   },
   {
     "name": "Generative AI Fundamentals",
