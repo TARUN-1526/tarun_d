@@ -240,7 +240,7 @@ export const CERTIFICATIONS: Certification[] = [
   {
     "name": "Programming in Java",
     "issuer": "NPTEL",
-    "link": "https://drive.google.com/file/d/1mForHYc0MDO38pL6FMN7o9hTXciY7kdQ/view?usp=sharing"
+    "link": "https://drive.google.com/file/d/1wZpWrz06o4STRiRh2H5nq2bJEHPs3s3O/view?usp=sharing"
   }
 ];
 
